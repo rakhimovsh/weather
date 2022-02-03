@@ -111,14 +111,21 @@ renderWeather = (data) => {
 
   elResult.innerHTML = html;
 };
+const renderError = (message) => {
+  elResult.textContent = message;
+};
 
 const getWeather = async (country) => {
-  const response = await fetch(
-    `https://api.weatherapi.com/v1/current.json?key=72bbe717bd8045c796c170208220202&q=${country}&aqi=no`
-  );
-  const data = await response.json();
+  try {
+    const response = await fetch(
+      `https://api.weatherapi.com/v1/current.json?key=72bbe717bd8045c796c170208220202&q=${country}&aqi=no`
+    );
+    const data = await response.json();
 
-  renderWeather(data);
+    renderWeather(data);
+  } catch {
+    renderError("Not found!!!");
+  }
 };
 
 btnSearch.addEventListener("click", () => {
