@@ -1,0 +1,11 @@
+body {
+  background-image: url("../img/SL_042221_42420_05.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 1080px) {
+  body {
+    background-image: url("../img/background-tablet.jpg");
+  }
+} ;

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="icon" href="./img/icons8-snow-64.png" />
+    <title>Weather</title>
+  </head>
+  <body>
+    <div class="container d-flex flex-column">
+      <div class="input-group mt-5 w-50 mx-auto">
+        <input
+          type="text"
+          class="form-control input"
+          placeholder="Enter your city"
+          aria-label="Enter your city"
+        />
+        <button
+          class="btn btn-primary btn-search"
+          type="button"
+          id="button-addon2"
+        >
+          Search
+        </button>
+      </div>
+      <div class="result mx-auto mt-5"></div>
+    </div>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
